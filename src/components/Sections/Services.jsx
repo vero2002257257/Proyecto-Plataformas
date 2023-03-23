@@ -4,8 +4,6 @@ import styled from "styled-components";
 import ClientSlider from "../Elements/ClientSlider";
 import ServiceBox from "../Elements/ServiceBox";
 import FullButton from "../Buttons/FullButton";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import{faGlassMartini} from "@fortawesome/free-solid-svg-icons";
 // Assets
 import AddImage1 from "../../assets/img/add/1.png";
 import AddImage2 from "../../assets/img/add/2.png";
@@ -35,6 +33,7 @@ export default function Services() {
               
             <ServiceBox
              icon="restaurante"
+             
                 title="RESTAURANTE"
               />
             </ServiceBoxWrapper>
