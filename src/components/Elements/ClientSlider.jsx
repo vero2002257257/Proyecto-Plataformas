@@ -8,7 +8,7 @@ import ClientLogo03 from "../../assets/img/clients/logo03.svg";
 import ClientLogo04 from "../../assets/img/clients/logo04.svg";
 import ClientLogo05 from "../../assets/img/clients/logo05.svg";
 import ClientLogo06 from "../../assets/img/clients/logo06.svg";
-
+import ClientLogo07 from "../../assets/img/clients/fuego.png";
 export default function ClientSlider() {
   const settings = {
     infinite: true,
@@ -44,34 +44,34 @@ export default function ClientSlider() {
     <div>
       <Slider {...settings}>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo01} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo02} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo03} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo04} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo05} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo06} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo03} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo04} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo01} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
         <LogoWrapper className="flexCenter">
-          <ImgStyle src={ClientLogo02} alt="client logo" />
+          <ImgStyle src={ClientLogo07} alt="client logo" />
         </LogoWrapper>
       </Slider>
     </div>
@@ -79,7 +79,7 @@ export default function ClientSlider() {
 }
 
 const LogoWrapper = styled.div`
-  width: 100%;
+  width: 60%;
   height: 100px;
   cursor: pointer;
   :focus-visible {
@@ -88,7 +88,7 @@ const LogoWrapper = styled.div`
   }
 `;
 const ImgStyle = styled.img`
-  width: 100%;
+  width: 60%;
   height: 100%;
   padding: 10%;
 `;
