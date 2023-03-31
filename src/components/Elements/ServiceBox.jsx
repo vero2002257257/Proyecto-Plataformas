@@ -28,6 +28,7 @@ export default function ServiceBox({icon,title, subtitle}) {
       break;
       
     case "restaurante":
+      
       getIcon = <FontAwesomeIcon icon={faShop}/>;
       break;
     case "teatro":
@@ -85,21 +86,27 @@ const Wrapper = styled.div`
   width: 100%;
 `;
 const IconStyle = styled.div`
-  @media (max-width: 860px) {
+  @media (max-width: 1500px) {
     margin: 0 auto;
+    font-size: 30px;
+    align-self: center;
   }
 `;
 const TitleStyle = styled.h2`
-  width: 100%;
+  width: 190%;
   max-width: 300px;
   margin: 0 auto;
   padding: 40px 0;
+  align-self: center;
   @media (max-width: 860px) {
     padding: 20px 0;
+    align-self: center;
+
   }
 `;
 const SubtitleStyle = styled.p`
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
+  align-self: center;
 `;

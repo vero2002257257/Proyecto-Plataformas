@@ -91,6 +91,7 @@ export default function Services() {
                />
                 </ServiceBoxWrapper>
             <ServiceBoxWrapper>
+
               <ServiceBox icon="videojuegos"
                title="VIDEOJUEGOS" 
                />
