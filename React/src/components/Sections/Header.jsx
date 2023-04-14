@@ -2,13 +2,24 @@ import React from "react";
 import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
+import Boton from "../Buttons/Boton";
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import About from "./About";
+
+
+
+
+
+
 
 export default function Header() {
+
   return (
+    
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
         <div>
@@ -17,7 +28,15 @@ export default function Header() {
           Impredecible es una red social, que busca sorprender a sus usuarios a la hora de interactuar entre sí, la idea consiste en relacionar a las personas con intereses en común, donde la aplicación genera un contacto entre los usuarios, permitiéndoles una cita en persona, de manera que el software arroje la actividad que deben realizar en la cita aleatoriamente. Es así como este medio busca fomentar relaciones humanas sin un contacto directo entre ellos, concediéndoles escapar de la monotonía.  
           </HeaderP>
           <BtnWrapper>
-            <FullButton title="Perfil👤" />
+       
+          
+          <BrowserRouter>
+  <Link to = "../About">
+    <button>Ir a la siguiente página</button>
+  </Link>
+</BrowserRouter>
+  <button Link to ='/About'>Aboussst</button>
+
           </BtnWrapper>
         </div>
       </LeftSide>
@@ -46,7 +65,6 @@ export default function Header() {
     </Wrapper>
   );
 }
-
 
 const Wrapper = styled.section`
   padding-top: 80px;

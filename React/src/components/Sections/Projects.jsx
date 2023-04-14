@@ -114,11 +114,12 @@ export default function Projects() {
                 <div style={{ width: "100px", marginLeft: "15px"  }}>
                   <FullButton 
                   imagen= {<img className="radius8" src={AddImage4} alt="add" />}
-                   action={() => alert("clicked")} />
+                   action={() => alert("chulu")} />
                 </div>
-                <div style={{ width: "110px", marginLeft: "15px" }}>
+                <div>
                   <FullButton imagen= {<img className="radius8" src={AddImage5} alt="add" />}
-                  action={() => alert("clicked")}/>
+                  action={() =>  {}
+                }/>                                
                 </div>
               </ButtonsRow>
             </AddRight>

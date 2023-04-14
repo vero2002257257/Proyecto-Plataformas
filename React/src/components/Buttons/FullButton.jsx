@@ -7,7 +7,7 @@ export default function FullButton({ title, action, border, imagen }) {
       className="animate pointer radius8"
       onClick={action ? () => action() : null}
       border={border}
-
+      href = "Projects.jsx"
     >
       {imagen}
       {title}

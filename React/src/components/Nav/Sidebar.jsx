@@ -41,7 +41,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="services"
+            to="contact"
             spy={true}
             smooth={true}
             offset={-60}
@@ -70,7 +70,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
             activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="pricing"
+            to="services"
             spy={true}
             smooth={true}
             offset={-60}
