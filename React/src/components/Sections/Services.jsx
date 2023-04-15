@@ -17,7 +17,52 @@ export default function Services() {
         <div className="container">
           <ClientSlider />
         </div>
-      </div>
+      </div> 
+
+
+      <div className="lightBg">
+          <div className="container">
+            <Advertising className="flexSpaceCenter">
+              <AddLeft>
+                <h4 className="font15 semiBold">Si quieres empezar a navegar, te invitamos a registrarte y si ya eres parte de la comunidad </h4>
+                <h2 className="font40 extraBold">Impredecible</h2>
+                <p className="font15 semiBold">
+                  inicia sesión.
+                </p>
+                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
+                  <div style={{ width: "190px" }}>
+                    <FullButton title="Registrarse"route="/registrarse"/>
+                  </div>
+                  <div style={{ width: "190px", marginLeft: "15px" }}>
+                    <FullButton title="Iniciar sesión" route="/about"/>
+                  </div>
+                </ButtonsRow>
+              </AddLeft>
+              <AddRight>
+                <AddRightInner>
+                  <div className="flexNullCenter">
+                    <AddImgWrapp1 className="flexCenter">
+                      <img src={AddImage1} alt="office" />
+                    </AddImgWrapp1>
+                    <AddImgWrapp2>
+                      <img src={AddImage2} alt="office" />
+                    </AddImgWrapp2>
+                  </div>
+                  <div className="flexNullCenter">
+                    <AddImgWrapp3>
+                      <img src={AddImage3} alt="office" />
+                    </AddImgWrapp3>
+                    <AddImgWrapp4>
+                      <img src={AddImage4} alt="office" />
+                    </AddImgWrapp4>
+                  </div>
+                </AddRightInner>
+              </AddRight>
+            </Advertising>
+          </div>
+        </div>
+      
+      
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
@@ -28,19 +73,22 @@ export default function Services() {
               <br />
             </p>
           </HeaderInfo>
+          
           <ServiceBoxRow className="flex">
-            <ServiceBoxWrapper>
-              
+          <ServiceBoxWrapper>
             <ServiceBox
-             icon="restaurante"
-             
+                icon="restaurante"
                 title="RESTAURANTE"
-              />
-            </ServiceBoxWrapper>
+                // Establecer el estilo directamente en el componente
+                style={{ color: 'yellow' }}
+  />
+  
+          </ServiceBoxWrapper>
             <ServiceBoxWrapper>
               <ServiceBox
                 icon="teatro"
                 title="TEATRO"
+                color="yellow"
               />
             </ServiceBoxWrapper>
             <ServiceBoxWrapper>
@@ -104,47 +152,7 @@ export default function Services() {
             
           </ServiceBoxRow>
         </div>
-        <div className="lightBg">
-          <div className="container">
-            <Advertising className="flexSpaceCenter">
-              <AddLeft>
-                <h4 className="font15 semiBold">Si quieres empezar a navegar, te invitamos a registrarte y si ya eres parte de la comunidad </h4>
-                <h2 className="font40 extraBold">Impredecible</h2>
-                <p className="font15 semiBold">
-                  inicia sesión.
-                </p>
-                <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  <div style={{ width: "190px" }}>
-                    <FullButton title="Registrarse" action={() => alert("clicked")} />
-                  </div>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <FullButton title="Iniciar sesión" action={() => alert("clicked")} border />
-                  </div>
-                </ButtonsRow>
-              </AddLeft>
-              <AddRight>
-                <AddRightInner>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp1 className="flexCenter">
-                      <img src={AddImage1} alt="office" />
-                    </AddImgWrapp1>
-                    <AddImgWrapp2>
-                      <img src={AddImage2} alt="office" />
-                    </AddImgWrapp2>
-                  </div>
-                  <div className="flexNullCenter">
-                    <AddImgWrapp3>
-                      <img src={AddImage3} alt="office" />
-                    </AddImgWrapp3>
-                    <AddImgWrapp4>
-                      <img src={AddImage4} alt="office" />
-                    </AddImgWrapp4>
-                  </div>
-                </AddRightInner>
-              </AddRight>
-            </Advertising>
-          </div>
-        </div>
+        
       </div>
     </Wrapper>
   );

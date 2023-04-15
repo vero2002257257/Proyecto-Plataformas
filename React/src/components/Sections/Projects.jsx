@@ -23,11 +23,8 @@ export default function Projects() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Usuarios</h1>
             <p className="font13">
-              
               <br />
-              
             </p>
-            
           </HeaderInfo>
           <div className="row textCenter">
             <div className="col-xs-12 col-sm-4 col-md-4 col-lg-4">
@@ -114,12 +111,12 @@ export default function Projects() {
                 <div style={{ width: "100px", marginLeft: "15px"  }}>
                   <FullButton 
                   imagen= {<img className="radius8" src={AddImage4} alt="add" />}
-                   action={() => alert("chulu")} />
+                   action={() => alert("On fire")} />
                 </div>
                 <div>
                   <FullButton imagen= {<img className="radius8" src={AddImage5} alt="add" />}
-                  action={() =>  {}
-                }/>                                
+                  action={() => alert("👎🏼")} />
+                                              
                 </div>
               </ButtonsRow>
             </AddRight>

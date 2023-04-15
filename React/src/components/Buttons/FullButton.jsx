@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
-export default function FullButton({ title, action, border, imagen}) {
+export default function FullButton({ title, action, border, imagen,route,}) {
   return (
     
-      <Wrapper
-      className="animate pointer radius8"
-      onClick={action ? () => action() : null}
-      border={border}
-      href = "Projects.jsx"
-      
-    >
-      
-      {imagen}
-      {title}
-    </Wrapper>
-    
-    
+  <Link to={route}> 
+  <Wrapper
+  className="animate pointer radius8"
+  onClick={action ? () => action() : null}
+  border={border}
+  href = "Projects.jsx"
+
+>
+  {imagen}
+  {title}
+  </Wrapper>
+  </Link>
   );
 }
 

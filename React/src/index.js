@@ -9,7 +9,12 @@ import { Helmet } from "react-helmet";
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./screens/About.jsx";
+import Registrarse from "./screens/Registrarse";
 import Landing from "./screens/Landing.jsx";
+import Compra from "./screens/Compra.jsx";
+
+
+
 ReactDOM.render(
   <>
     <Helmet>
@@ -21,6 +26,9 @@ ReactDOM.render(
       <Routes>
         <Route exact path="" element={<Landing />} />
         <Route exact path="/About" element={<About />} />
+        <Route exact path="/Registrarse" element={<Registrarse />} />
+        <Route exact path="/Compra" element={<Compra />} />
+
       </Routes>
     </Router>
   

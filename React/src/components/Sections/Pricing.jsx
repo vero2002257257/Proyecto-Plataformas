@@ -11,39 +11,27 @@ export default function Pricing() {
           <HeaderInfo>
             <h1 className="font40 extraBold">Planes</h1>
             <p className="font13">
-              Cuáles son tus gustos
+              ¿Cuáles son tus gustos? En Impredecible, hay opciones para satisfacer las necesidades de todas las personas.
+               Si estás buscando una relación seria, puedes encontrarla allí. Si deseas hacer nuevos amigos,
+               también es posible. Y si eres un estudiante universitario 
+              que busca una experiencia enriquecedora, estás en el lugar correcto.
               <br />
             </p>
           </HeaderInfo>
           <TablesWrapper className="flexSpaceNull">
             <TableBox>
               <PricingTable
-                icon="roller"
-                price="$29,99/mo"
+                icon="browser"
+                price="COP 16,900"
                 title="Hombres"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                text="Si eres hombre y te interesa tu mismo género, este plan es ideal para ti. Está diseñado para que obtengas recomendaciones 
+                exclusivas si buscas amor, quieres salir con gente nueva o solo tener algo casual, este es el lugar correcto."
                 offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: false },
-                  { name: "Product", cheked: false },
-                  { name: "Product Offer", cheked: false },
-                ]}
-                action={() => alert("clicked")}
-              />
-            </TableBox>
-            <TableBox>
-              <PricingTable
-                icon="monitor"
-                price="$49,99/mo"
-                title="Mujeres"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
-                offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: true },
-                  { name: "Product", cheked: true },
-                  { name: "Product Offer", cheked: false },
+                  { name: "Exclusividad", cheked: true },
+                  { name: "Nuevas experiencias", cheked: true },
+                  { name: "Disfruta sin límites", cheked: true },
+                  { name: "Puedes cambiar de plan cuando quieras", cheked: true },
+                  { name: "Puedes cancelar el plan cuando quieras", cheked: true },
                 ]}
                 action={() => alert("clicked")}
               />
@@ -51,15 +39,33 @@ export default function Pricing() {
             <TableBox>
               <PricingTable
                 icon="browser"
-                price="$59,99/mo"
-                title="Mixto"
-                text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor."
+                price="COP 16,900"
+                title="Mujeres"
+                text="Si eres mujer y te interesa tu mismo género, este plan es ideal para ti. Está diseñado para que obtengas recomendaciones 
+                exclusivas si buscas amor, quieres salir con gente nueva o solo tener algo casual, este es el lugar correcto."
                 offers={[
-                  { name: "Product Offer", cheked: true },
-                  { name: "Offer", cheked: true },
-                  { name: "Product Offer #2", cheked: true },
-                  { name: "Product", cheked: true },
-                  { name: "Product Offer", cheked: true },
+                  { name: "Exclusividad", cheked: true },
+                  { name: "Nuevas experiencias", cheked: true },
+                  { name: "Disfruta sin límites", cheked: true },
+                  { name: "Puedes cambiar de plan cuando quieras", cheked: true },
+                  { name: "Puedes cancelar el plan cuando quieras", cheked: true },
+                ]}
+                action={() => alert("clicked")}
+              />
+            </TableBox>
+            <TableBox>
+              <PricingTable
+                icon="browser"
+                price="COP 38,900"
+                title="Mixto"
+                text="Si eres hombre o mujer y te interesa tu género opuesto, este plan es ideal para ti. Está diseñado para que obtengas recomendaciones 
+                exclusivas si buscas amor, quieres salir con gente nueva o solo tener algo casual, este es el lugar correcto."
+                offers={[
+                  { name: "Exclusividad", cheked: true },
+                  { name: "Nuevas experiencias", cheked: true },
+                  { name: "Disfruta sin límites", cheked: true },
+                  { name: "Puedes cambiar de plan cuando quieras", cheked: true },
+                  { name: "Puedes cancelar el plan cuando quieras", cheked: true },
                 ]}
                 action={() => alert("clicked")}
               />
@@ -94,7 +100,3 @@ const TableBox = styled.div`
     margin: 0 auto
   }
 `;
-
-
-
-

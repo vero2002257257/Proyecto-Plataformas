@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 // Assets
-import ContactImg1 from "../../assets/img/contact-1.png";
-import ContactImg2 from "../../assets/img/contact-2.png";
-import ContactImg3 from "../../assets/img/contact-3.png";
+
+import FullButton from "../Buttons/FullButton";
 
 export default function Contact() {
   return (
@@ -28,7 +27,7 @@ export default function Contact() {
                 <textarea rows="4" cols="50" type="text" id="message" name="message" className="font20 extraBold" />
               </Form>
               <SumbitWrapper className="flex">
-                <ButtonInput type="submit" value="Enviar" className="pointer animate radius8" style={{ maxWidth: "220px" }} />
+                <FullButton title={"Enviar"} action={()=>alert("Mensaje enviado con éxito")}></FullButton>
               </SumbitWrapper>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 flex">

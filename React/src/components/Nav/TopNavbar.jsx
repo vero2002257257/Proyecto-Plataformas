@@ -37,7 +37,7 @@ export default function TopNavbar() {
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
+              <Link activeClass="active" style={{ padding: "10px 15px" }} to="header" spy={true} smooth={true} offset={-80}>
                 Quienes Somos
               </Link>
             </li>
@@ -65,12 +65,12 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <a href="/" style={{ padding: "10px 30px 10px 0" }}>
+              <a href="/about" style={{ padding: "10px 30px 10px 0" }}>
                 Iniciar sesion
               </a>
             </li>
             <li className="semiBold font15 pointer flexCenter">
-              <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
+              <a href="/registrarse" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
                 Registrarse           </a>
             </li>
           </UlWrapperRight>

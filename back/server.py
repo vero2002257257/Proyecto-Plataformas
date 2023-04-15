@@ -1,9 +1,14 @@
 from flask import Flask
+from flask_cors import CORS, cross_origin
+
 
 app = Flask(__name__)
+CORS(app) 
+
 
 #Members API route
 @app.route("/members")
+@cross_origin(origin='*')
 
 def members():
     return{"members": ["Member1", "Member2", "Member3"]}
@@ -13,6 +18,7 @@ if __name__ == "__main__":
     
 # Ruta para el inicio de sesión
 @app.route('/login', methods=['POST'])
+@cross_origin(origin='*')
 def login():
     # Obtener datos del formulario de inicio de sesión
     username = request.form['username']
@@ -28,7 +34,36 @@ def login():
 
 if name == 'main':
     app.run(debug=True)
-    
+
+# app.py (archivo principal de Flask)
+
+app = Flask(__name__)
+
+# Ruta para el registro de usuarios
+@app.route('/api/register', methods=['POST'])
+@cross_origin(origin='*')
+def register():
+    # Obtener los datos del formulario de registro desde el cuerpo de la solicitud
+    username = request.json['username']
+    password = request.json['password']
+    email = request.json['email']
+
+    # Validar y guardar los datos en la base de datos o en otro lugar
+    # ... código de validación y almacenamiento ...
+
+    # Enviar respuesta de éxito al frontend
+    response = {
+        'message': 'Registro exitoso',
+        'data': {
+            'username': username,
+            'email': email
+        }
+    }
+    return jsonify(response), 200
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 
 
 
