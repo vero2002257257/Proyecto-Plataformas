@@ -16,7 +16,7 @@ const RegistroForm = () => {
       setLoading(true); // Mostrar animación de carga
 
       // Enviar solicitud de registro al backend
-      const response = await axios.post('/api/register', {
+      const response = await axios.post('http://localhost:5000/register', {
         username,
         password,
         email
