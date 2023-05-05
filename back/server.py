@@ -1,57 +1,51 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
-
+from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-CORS(app) 
+CORS(app) #Permitir solicitudes CORS
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sebas2013@localhost/flasksql' # URL de la base de datos
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.secret_key = 'secret string'
+db = SQLAlchemy(app) # instancia de la base de datos
 
+class User(db.Model): # modelo de la tabla de usuarios
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(50), unique=True)
+    password = db.Column(db.String(50))
+    email = db.Column(db.String(50), unique=True)
 
-#Members API route
-@app.route("/members")
-@cross_origin(origin='*')
+    def __init__(self, username, password, email):
+        self.username = username
+        self.password = password
+        self.email = email
 
-def members():
-    return{"members": ["Member1", "Member2", "Member3"]}
+    def __repr__(self):
+        return f'<User {self.username}>'
 
-if __name__ == "__main__":
-    app.run(debug=True)
-    
-# Ruta para el inicio de sesión
+with app.app_context():
+    db.create_all() # crea la tabla de usuarios si no existe
+
 @app.route('/login', methods=['POST'])
 @cross_origin(origin='*')
 def login():
-    # Obtener datos del formulario de inicio de sesión
-    username = request.form['username']
-    password = request.form['password']
-
-    # Verificar las credenciales del usuario (esto es solo un ejemplo, debes implementar tu propia lógica de autenticación)
-    if username == 'usuario' and password == 'contraseña':
-        # Retornar una respuesta de éxito
+    username = request.json['username']
+    password = request.json['password']
+    user = User.query.filter_by(username=username).first()
+    if user and user.password == password:
         return jsonify({'message': 'Inicio de sesión exitoso'}), 200
     else:
-        # Retornar una respuesta de error
         return jsonify({'message': 'Credenciales inválidas'}), 401
 
-if name == 'main':
-    app.run(debug=True)
-
-# app.py (archivo principal de Flask)
-
-app = Flask(__name__)
-
-# Ruta para el registro de usuarios
-@app.route('/api/register', methods=['POST'])
+@app.route('/register', methods=['POST'])
 @cross_origin(origin='*')
 def register():
-    # Obtener los datos del formulario de registro desde el cuerpo de la solicitud
     username = request.json['username']
     password = request.json['password']
     email = request.json['email']
-
-    # Validar y guardar los datos en la base de datos o en otro lugar
-    # ... código de validación y almacenamiento ...
-
-    # Enviar respuesta de éxito al frontend
+    user = User(username, password, email)
+    db.session.add(user) # agrega el usuario a la base de datos
+    db.session.commit() # guarda los cambios en la base de datos
     response = {
         'message': 'Registro exitoso',
         'data': {
@@ -63,7 +57,3 @@ def register():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
-
-
