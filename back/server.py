@@ -5,6 +5,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
 
 app = Flask(__name__)
+app.config['JWT_SECRET_KEY'] = 'secret string' # Agregar una clave secreta para firmar los tokens
+jwt = JWTManager(app) # instancia de JWT
 CORS(app) #Permitir solicitudes CORS
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sebas2013@localhost/flasksql' # URL de la base de datos
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -68,6 +70,7 @@ def get_matches():
     matches = Match.query.filter_by(user_id=user_id).all()
     # ...
     return jsonify(matches), 200
+
 
 if __name__ == '__main__':
     app.run(debug=True)
