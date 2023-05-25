@@ -34,7 +34,7 @@ const RegistroForm = () => {
       setLoading(false); // Ocultar animación de carga
 
       // Manejar errores de la solicitud
-      setError('Error en el registro de usuario');
+      setError('Error en el registro de user');
       console.error(error);
     }
   };
