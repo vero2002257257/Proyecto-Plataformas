@@ -145,7 +145,7 @@ const FormularioPerfil = () => {
           </ul>
         </div>
         <button type="submit" style={{ backgroundColor: '#7620ff', color: 'white', padding: '10px 20px', border: 'none', borderRadius: '5px', marginTop: '10px' }}>
-          Crear perfil
+          Ver perfil
         </button>
       </form>
     </div>

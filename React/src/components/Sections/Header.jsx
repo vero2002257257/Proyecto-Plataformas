@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 // Components
-import FullButton from "../Buttons/FullButton";
-import Boton from "../Buttons/Boton";
+
 // Assets
 import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import { Button } from "react-scroll";
-import ButtonNav from "../Buttons/ButtonNav";
+
+
+
 
 export default function Header() {
 

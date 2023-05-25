@@ -7,7 +7,7 @@ import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
 import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
 //Iconos
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faBahtSign, faBasketShopping, faBathtub, faBed, faCarAlt, faChampagneGlasses, faChurch, faFilm, faHotdog, faHotel, faMartiniGlass, faMicrophone, faMountainSun, faMusic, faPallet, faPeopleArrows, faPeopleGroup, faPersonBooth, faPersonHalfDress, faPlay, faPoop, faShop, faTheaterMasks, faTicket, faTicketAlt, faTicketSimple, faVideoSlash} from "@fortawesome/free-solid-svg-icons";
+import {faBasketShopping,faCarAlt, faChampagneGlasses,faFilm, faHotel, faMountainSun, faPeopleGroup, faPersonBooth,faPlay,faShop, faTheaterMasks, faTicket} from "@fortawesome/free-solid-svg-icons";
 
 
 export default function ServiceBox({icon,title, subtitle}) {
