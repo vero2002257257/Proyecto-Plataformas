@@ -37,15 +37,8 @@ const RegistroForm = () => {
       setLoading(false); // Ocultar animación de carga
 
       // Manejar errores de la solicitud
-<<<<<<< HEAD
-<<<<<<< HEAD
-      setError('Error en el registro de user');
-=======
-      setError('Error en el registro');
->>>>>>> 598f674fb451ab32646abb45400bb5c2688e9d88
-=======
-      setError('Error en el registroooooo');
->>>>>>> 93349b9c35eae5ab476766e34e67845a8bc5850b
+      setError('Error en el registro de usero');
+
       console.error(error);
     }
   };
