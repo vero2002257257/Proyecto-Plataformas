@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+
+
+
 
 const RegistroForm = () => {
   const [username, setUsername] = useState('');
@@ -29,6 +33,8 @@ const RegistroForm = () => {
       setSuccess(true);
       setError('');
       console.log(message, data);
+      
+
 
     } catch (error) {
       setLoading(false); // Ocultar animación de carga
@@ -101,6 +107,7 @@ const RegistroForm = () => {
             border: '2px solid #7620ff', // Color de borde #7620ff
           }}
         />
+        <Link to="/Crearperfil/">
         <button
           type="submit"
           style={{
@@ -115,9 +122,11 @@ const RegistroForm = () => {
           }}
           onMouseEnter={(e) => e.target.style.backgroundColor = '#7620ff'}
           onMouseLeave={(e) => e.target.style.backgroundColor = 'gray'}
+         
         >
           Registrarse
         </button>
+        </Link>
       </form>
     </div>
   );

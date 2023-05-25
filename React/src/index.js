@@ -12,6 +12,8 @@ import About from "./screens/About.jsx";
 import Registrarse from "./screens/Registrarse";
 import Landing from "./screens/Landing.jsx";
 import Compra from "./screens/Compra.jsx";
+import Crearperfil from "./screens/Crearperfil";
+
 
 
 
@@ -28,6 +30,8 @@ ReactDOM.render(
         <Route exact path="/About" element={<About />} />
         <Route exact path="/Registrarse" element={<Registrarse />} />
         <Route exact path="/Compra" element={<Compra />} />
+        <Route exact path="/Crearperfil" element={<Crearperfil />} />
+        
 
       </Routes>
     </Router>
