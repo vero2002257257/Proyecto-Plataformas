@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 from flask_sqlalchemy import SQLAlchemy
 
+
 app = Flask(__name__)
 CORS(app) #Permitir solicitudes CORS
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sebas2013@localhost/flasksql' # URL de la base de datos
@@ -54,6 +55,11 @@ def register():
         }
     }
     return jsonify(response), 200
+
+@app.route('/perfil', methods=['POST'])
+@cross_origin(origin='*')
+def home():
+    return render_template("index.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
