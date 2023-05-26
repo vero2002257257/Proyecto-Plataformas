@@ -17,7 +17,7 @@ const RegistroForm = () => {
       setLoading(true); // Mostrar animación de carga
 
       // Enviar solicitud de registro al backend
-      const response = await axios.post('/api/register', {
+      const response = await axios.post('http://localhost:5000/register', {
         username,
         password,
         email
@@ -30,14 +30,14 @@ const RegistroForm = () => {
       setSuccess(true);
       setError('');
       console.log(message, data);
-      
-
+       // Redirigir a una nueva pestaña
+       window.open('/Crear/', '/Crear/');
 
     } catch (error) {
       setLoading(false); // Ocultar animación de carga
 
       // Manejar errores de la solicitud
-      setError('Error en el registro de usero');
+      setError('Error en el registro de user');
 
       console.error(error);
     }
@@ -105,7 +105,7 @@ const RegistroForm = () => {
             border: '2px solid #7620ff', // Color de borde #7620ff
           }}
         />
-        <Link to="/Crear/">
+        
         <button
           type="submit"
           style={{
@@ -120,11 +120,10 @@ const RegistroForm = () => {
           }}
           onMouseEnter={(e) => e.target.style.backgroundColor = '#7620ff'}
           onMouseLeave={(e) => e.target.style.backgroundColor = 'gray'}
-         
         >
           Registrarse
         </button>
-        </Link>
+       
       </form>
     </div>
   );

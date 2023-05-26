@@ -11,6 +11,7 @@ import Registrarse from "./screens/Registrarse";
 import Landing from "./screens/Landing.jsx";
 import Compra from "./screens/Compra.jsx";
 import Crear from "./screens/Crear.jsx";
+import Chat from "./screens/chat.jsx";
 
 createRoot(document.getElementById('root')).render(
   <>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
         <Route exact path="/Registrarse" element={<Registrarse />} />
         <Route exact path="/Compra" element={<Compra />} />
         <Route exact path="/Crear" element={<Crear />} />
+        <Route exact path="/chat" element={<Chat />} />
 
       </Routes>
     </Router>

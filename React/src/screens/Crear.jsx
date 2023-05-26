@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 const FormularioPerfil = () => {
+
   const [nombre, setNombre] = useState('');
   const [edad, setEdad] = useState('');
   const [sexo, setSexo] = useState('');
@@ -55,13 +56,23 @@ const FormularioPerfil = () => {
     }
 
     try {
-      // Lógica para enviar los datos del perfil al backend o hacer cualquier otro procesamiento
-      // Puedes utilizar la biblioteca axios para hacer solicitudes HTTP
-      // await axios.post('/api/crear-perfil', { nombre, edad, sexo, descripcion, gustos, foto });
+      const formData = new FormData();
+      formData.append('nombre', nombre);
+      formData.append('edad', edad);
+      formData.append('sexo', sexo);
+      formData.append('descripcion', descripcion);
+      formData.append('foto', foto);
+      formData.append('gustos', JSON.stringify(gustos));
 
-      // Mostrar mensaje de éxito
+      await axios.post('http://localhost:5000/perfil', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+
       setIsSubmitted(true);
       alert('¡Perfil creado exitosamente!');
+      window.open('/chat/', '/chat/');
     } catch (error) {
       // Mostrar mensaje de error en caso de fallo
       alert('Hubo un error al crear el perfil. Por favor, intenta nuevamente.');
@@ -168,6 +179,7 @@ const FormularioPerfil = () => {
             />
           )}
         </div>
+       
         <button
           type="submit"
           style={{
@@ -187,6 +199,7 @@ const FormularioPerfil = () => {
         >
           {isLoading ? 'Creando perfil...' : 'Crear perfil'}
         </button>
+        
       </form>
       {isSubmitted && (
         <p style={{ marginTop: '20px', fontSize: '18px', color: 'green' }}>
