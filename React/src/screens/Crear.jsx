@@ -78,64 +78,93 @@ const FormularioPerfil = () => {
   };
 
   return (
-    <div className="formulario-perfil-container" style={{ textAlign: 'center', background: 'linear-gradient(to bottom, #F4F4F4, #cb9bde)', minHeight: '100vh' }}>
-      <h1 style={{ color: '#7620ff', marginBottom: '20px' }}>Crear perfil</h1>
+    <div className="formulario-perfil-container" style={{ textAlign: 'center', background: '#7620ff', minHeight: '100vh' }}>
+     <h1 style={{ 
+        color: '#fdecda',
+        marginBottom: '20px',
+        fontFamily: 'Arial, sans-serif',
+        fontSize: '36px',
+        fontWeight: 'bold',
+        textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
+        animation: 'pulse 1s infinite',
+    }}>
+  Crear perfil🤳🏻
+</h1>
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <div className="form-group">
-          <label style={{ color: '#7620ff', fontSize: '20px' }}>Nombre:</label>
+          <label className="label-style"></label>
           <input
             type="text"
-            value={nombre}
+            placeholder="Nombre"
             onChange={(e) => setNombre(e.target.value)}
             required
-            style={{ color: 'purple', fontSize: '20px' }}
+            style={{ marginBottom: '12px', borderRadius: '17px', padding: '7px', fontSize: '18px', border: '2px solid #7620ff' }}
           />
         </div>
         <div className="form-group">
-          <label style={{ color: '#7620ff', fontSize: '20px' }}>Edad:</label>
+          <label className="label-style"></label>
           <input
             type="number"
+            placeholder="Edad"
             value={edad}
             onChange={(e) => setEdad(e.target.value)}
             required
             min="18"
-            style={{ color: 'purple', fontSize: '20px' }}
+            style={{ marginBottom: '12px', borderRadius: '17px', padding: '7px', fontSize: '18px', border: '2px solid #7620ff' }}
           />
         </div>
         <div className="form-group">
-          <label style={{ color: '#7620ff', fontSize: '20px' }}>Sexo:</label>
+          <label className="label-style"></label>
           <select
             value={sexo}
             onChange={(e) => setSexo(e.target.value)}
             required
-            style={{ color: 'purple', fontSize: '20px' }}
+            style={{ marginBottom: '12px', borderRadius: '17px', padding: '7px', fontSize: '18px', border: '2px solid #7620ff' }}
           >
-            <option value="">Elegir sexo</option>
+            <option value="" disabled>Elegir sexo</option>
             <option value="masculino">Masculino</option>
             <option value="femenino">Femenino</option>
           </select>
         </div>
+
         <div className="form-group">
-          <label style={{ color: '#7620ff', fontSize: '20px' }}>Descripción:</label>
-          <textarea
-            value={descripcion}
+        <label className="label-style"></label>
+          <input
+            type="text"
+            placeholder="Descripción"
             onChange={(e) => setDescripcion(e.target.value)}
             required
-            style={{ color: 'purple', fontSize: '20px' }}
+            style={{ marginBottom: '12px', borderRadius: '17px', padding: '9px', fontSize: '18px', border: '2px solid #7620ff' }}
           />
         </div>
         <div className="form-group">
-          <label style={{ color: '#7620ff', fontSize: '20px' }}>Gustos:</label>
+        <h1 style={{ color: '#e3c9df', marginBottom: '20px' }}>Elige tus gustos</h1>
           <div className="gustos-container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }}>
             {opcionesGustos.map((gusto) => (
-              <button
+                //Boton
+                <button
                 key={gusto}
                 className={`gusto-button ${gustos.includes(gusto) ? 'selected' : ''}`}
                 onClick={() => handleGustoToggle(gusto)}
-                style={{ fontSize: '18px', backgroundColor: gustos.includes(gusto) ? '#7620ff' : 'gray', color: 'white', borderRadius: '30px', padding: '12px 29px', border: 'none', cursor: 'pointer', transition: 'background-color 0.3s ease-in-out', margin: '5px' }}
+                style={{
+                  fontSize: '18px',
+                  backgroundColor: 'transparent',
+                  color: 'white',
+                  borderRadius: '30px',
+                  padding: '12px 29px',
+                  border: 'none',
+                  cursor: 'pointer',
+                  transition: 'background-color 0.3s ease-in-out',
+                  alignSelf: 'center',
+                  marginTop: '20px',
+                }}
+                onMouseEnter={(e) => e.target.style.color = '#cc9ce6'}
+                onMouseLeave={(e) => e.target.style.color = 'white'}
               >
                 {gusto}
               </button>
+              
+              //Termina
             ))}
           </div>
           <ul className="gustos-list">
@@ -147,7 +176,7 @@ const FormularioPerfil = () => {
           </ul>
         </div>
         <div className="form-group">
-          <label style={{ color: '#7620ff', fontSize: '20px' }}></label>
+          <label className="label-style"></label>
           <label htmlFor="foto" className="foto-label">
             <FontAwesomeIcon icon={faPlus} className="add-icon" />
             Agregar foto
@@ -172,7 +201,7 @@ const FormularioPerfil = () => {
           type="submit"
           style={{
             backgroundColor: isLoading ? 'gray' : '#7620ff',
-            color: 'white',
+            color: '#7620ff',
             borderRadius: '30px',
             padding: '12px 29px',
             border: 'none',
@@ -182,14 +211,14 @@ const FormularioPerfil = () => {
             marginTop: '20px', // Agregar margen superior
           }}
           onMouseEnter={(e) => e.target.style.backgroundColor = isLoading ? 'gray' : '#6c1df2'}
-          onMouseLeave={(e) => e.target.style.backgroundColor = isLoading ? 'gray' : '#7620ff'}
+          onMouseLeave={(e) => e.target.style.backgroundColor = isLoading ? 'gray' : '#e3c9df'}
           disabled={isLoading}
         >
           {isLoading ? 'Creando perfil...' : 'Crear perfil'}
         </button>
       </form>
       {isSubmitted && (
-        <p style={{ marginTop: '20px', fontSize: '18px', color: 'green' }}>
+        <p style={{ marginTop: '20px', fontSize: '18px', color: '#e3c9df' }}>
           ¡Perfil creado exitosamente!
         </p>
       )}
@@ -198,4 +227,3 @@ const FormularioPerfil = () => {
 };
 
 export default FormularioPerfil;
-
