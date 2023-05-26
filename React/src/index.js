@@ -10,7 +10,12 @@ import About from "./screens/About.jsx";
 import Registrarse from "./screens/Registrarse";
 import Landing from "./screens/Landing.jsx";
 import Compra from "./screens/Compra.jsx";
+<<<<<<< HEAD
+import Crearperfil from "./screens/Crearperfil";
+
+=======
 import Crear from "./screens/Crear.jsx";
+>>>>>>> 2b2539cb8950f987483a846df7a3168c0bb2e9ff
 
 
 
@@ -28,7 +33,12 @@ createRoot(document.getElementById('root')).render(
         <Route exact path="/About" element={<About />} />
         <Route exact path="/Registrarse" element={<Registrarse />} />
         <Route exact path="/Compra" element={<Compra />} />
+<<<<<<< HEAD
+        <Route exact path="/Crearperfil" element={<Crearperfil />} />
+        
+=======
         <Route exact path="/Crear" element={<Crear />} />
+>>>>>>> 2b2539cb8950f987483a846df7a3168c0bb2e9ff
 
       </Routes>
     </Router>

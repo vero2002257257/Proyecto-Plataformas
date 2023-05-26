@@ -1,6 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
+<<<<<<< HEAD
+SQLALCHEMY_DATABASE_URI = "mssql+pyodbc://localhost:3306/ImpredecibleBD?driver=SQL Server Native Client 11.0&trusted_connection=yes"
+SQLALCHEMY_TRACK_MODIFICATIONS = False
+=======
 from flask_sqlalchemy import SQLAlchemy
+>>>>>>> 2b2539cb8950f987483a846df7a3168c0bb2e9ff
 
 
 app = Flask(__name__)
@@ -63,3 +68,15 @@ def home():
 
 if __name__ == '__main__':
     app.run(debug=True)
+<<<<<<< HEAD
+
+#Ruta de la tabla user
+from .models import User
+@app.route('/users')
+def get_users():
+    users = User.query.all()
+    return jsonify([{'id': u.id, 'name': u.name, 'email': u.email} for u in users])
+
+
+=======
+>>>>>>> 2b2539cb8950f987483a846df7a3168c0bb2e9ff

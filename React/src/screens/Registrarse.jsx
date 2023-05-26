@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 2b2539cb8950f987483a846df7a3168c0bb2e9ff
 
 const RegistroForm = () => {
   const [username, setUsername] = useState('');
@@ -37,7 +43,15 @@ const RegistroForm = () => {
       setLoading(false); // Ocultar animación de carga
 
       // Manejar errores de la solicitud
+<<<<<<< HEAD
+<<<<<<< HEAD
+      setError('Error en el registro de user');
+=======
+      setError('Error en el registro');
+>>>>>>> 598f674fb451ab32646abb45400bb5c2688e9d88
+=======
       setError('Error en el registroooooo');
+>>>>>>> 93349b9c35eae5ab476766e34e67845a8bc5850b
       console.error(error);
     }
   };
@@ -104,7 +118,11 @@ const RegistroForm = () => {
             border: '2px solid #7620ff', // Color de borde #7620ff
           }}
         />
+<<<<<<< HEAD
+        <Link to="/Crearperfil/">
+=======
         <Link to="/Crear/">
+>>>>>>> 2b2539cb8950f987483a846df7a3168c0bb2e9ff
         <button
           type="submit"
           style={{
