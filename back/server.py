@@ -55,11 +55,5 @@ def register():
         }
     }
     return jsonify(response), 200
-
-@app.route('/perfil', methods=['POST'])
-@cross_origin(origin='*')
-def home():
-    return render_template("index.html")
-
 if __name__ == '__main__':
     app.run(debug=True)

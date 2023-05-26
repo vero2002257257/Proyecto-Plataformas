@@ -12,9 +12,6 @@ import Landing from "./screens/Landing.jsx";
 import Compra from "./screens/Compra.jsx";
 import Crear from "./screens/Crear.jsx";
 
-
-
-
 createRoot(document.getElementById('root')).render(
   <>
     <Helmet>
